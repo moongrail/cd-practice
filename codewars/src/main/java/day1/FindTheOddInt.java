@@ -5,12 +5,12 @@ import java.util.Map;
 
 public class FindTheOddInt {
     public static int findIt(int[] a) {
-        HashMap<Integer, Integer> findOdd = new HashMap<>();
-        for (int i = 0; i < a.length; i++) {
-            if (!findOdd.containsKey(a[i])) {
-                findOdd.put(a[i], 1);
+        Map<Integer, Integer> findOdd = new HashMap<>();
+        for (int num : a) {
+            if (!findOdd.containsKey(num)) {
+                findOdd.put(num, 1);
             } else {
-                findOdd.put(a[i], findOdd.get(a[i]) + 1);
+                findOdd.put(num, findOdd.get(num) + 1);
             }
         }
         return findOdd.entrySet().stream()
