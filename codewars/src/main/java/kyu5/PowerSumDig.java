@@ -18,11 +18,9 @@ public class PowerSumDig {
      */
     public static long powerSumDigTerm(int n) {
         if (n == 0) return 0;
-        // your code
         int start = 2;
         int pow = 2;
         long tempNum = 0;
-        Map<Integer, Long> map = new HashMap<>();
         List<Long> result = new ArrayList<>();
         for (int i = start; i < 81; i++) {
             for (int j = pow; j < 25; j++) {
@@ -40,9 +38,6 @@ public class PowerSumDig {
             }
         }
         result.sort(Comparator.naturalOrder());
-        for (int i = 0; i < result.size(); i++) {
-            map.put(i + 1, result.get(i));
-        }
-        return map.get(n);
+        return result.get(n-1);
     }
 }
