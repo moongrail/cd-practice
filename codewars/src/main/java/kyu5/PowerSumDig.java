@@ -40,4 +40,5 @@ public class PowerSumDig {
         result.sort(Comparator.naturalOrder());
         return result.get(n-1);
     }
+
 }
